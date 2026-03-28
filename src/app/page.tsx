@@ -2,7 +2,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center">
       <p className="text-muted-foreground">
-        Clone target not yet built. Run <code className="font-mono text-foreground">/clone-website</code> to start.
+        Template ready. Follow <code className="font-mono text-foreground">AGENTS.md</code> and run your
+        clone workflow to start.
       </p>
     </main>
   );
