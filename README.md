@@ -4,7 +4,7 @@
 
 A reusable template for reverse-engineering any website and rebuilding it as a pixel-perfect clone using AI coding agents. **Recommended: [Claude Code](https://docs.anthropic.com/en/docs/claude-code) with Opus 4.6 for best results** — but works with a variety of AI coding agents.
 
-Point it at a URL, run `/clone-website`, and your AI agent will inspect the site, extract design tokens and assets, write component specs, and dispatch parallel builders to reconstruct every section.
+Point an URL, run `/clone-website`, and your AI agent will inspect the site, extract design tokens and assets, write component specs, and dispatch parallel builders to reconstruct every section.
 
 ## Demo
 
@@ -33,7 +33,7 @@ Point it at a URL, run `/clone-website`, and your AI agent will inspect the site
    ```
 5. **Customize** (optional) — after the base clone is built, modify as needed
 
-> Using a different agent? Open `AGENTS.md` for project instructions — most agents pick it up automatically.
+> Using an different agent? Open `AGENTS.md` for project instructions — most agents pick it up automatically.
 
 
 ## Supported Platforms
@@ -70,13 +70,13 @@ Point it at a URL, run `/clone-website`, and your AI agent will inspect the site
 
 The `/clone-website` skill runs a multi-phase pipeline:
 
-1. **Reconnaissance** — screenshots, design token extraction, interaction sweep (scroll, click, hover, responsive)
+1. **Reconnaissance** — screenshots, design token extraction, interaction sweep (scroll, click, hover, responsive
 2. **Foundation** — updates fonts, colors, globals, downloads all assets
 3. **Component Specs** — writes detailed spec files (`docs/research/components/`) with exact computed CSS values, states, behaviors, and content
 4. **Parallel Build** — dispatches builder agents in git worktrees, one per section/component
 5. **Assembly & QA** — merges worktrees, wires up the page, runs visual diff against the original
 
-Each builder agent receives the full component specification inline — exact `getComputedStyle()` values, interaction models, multi-state content, responsive breakpoints, and asset paths. No guessing.
+Each agent builder receives the full component specification inline — exact `getComputedStyle()` values, interaction models, multi-state content, responsive breakpoints, and asset paths. No guessing.
 
 ## Project Structure
 
